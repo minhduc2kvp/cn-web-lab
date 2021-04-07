@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+</head>
+
+<body>
+    <div style="display: flex; margin-left: 30%;">
+        <div style="margin-right: 20px;">
+            <div style="height: 100px; width: 100px; background-color: black;"
+                onmouseover="changeColorOver(this, 'red')" onmouseout="changeColorOut(this)">
+            </div>
+            <p style="text-align: center;">RED</p>
+        </div>
+        <div style="margin-right: 20px;">
+            <div style="height: 100px; width: 100px; background-color: black;"
+                onmouseover="changeColorOver(this, 'green')" onmouseout="changeColorOut(this)"></div>
+            <p style="text-align: center;">GREEN</p>
+        </div>
+        <div style="margin-right: 20px;">
+            <div style="height: 100px; width: 100px; background-color: black;"
+                onmouseover="changeColorOver(this, 'blue')" onmouseout="changeColorOut(this)"></div>
+            <p style="text-align: center;">BLUE</p>
+        </div>
+    </div>
+
+    <script>
+        function changeColorOver(x, color) {
+            x.style.backgroundColor = color;
+        }
+
+        function changeColorOut(x) {
+            x.style.backgroundColor = "black";
+        }
+    </script>
+</body>
+
+</html>

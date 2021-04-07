@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2</title>
+</head>
+
+<body>
+    <div style="margin-top: 5px;display: flex;">
+        <div style="width: 50%;">
+            <h3>Blog yêu thích</h3>
+            <span style="font-size: 15px;">Link : </span>
+            <a id="favorite" href=""></a>
+        </div>
+
+        <div style="width: 50%;">
+            <form>
+                <h3>Biểu mẫu đăng ký blog yêu thích</h3>
+                <span style="font-size: 15px;">Link : </span>
+                <input id="link" style="width: 50%; font-size: 15px;" type="text" name="link"><br>
+            </form>
+            <button style="margin-top: 10px; font-size: 15px; margin-left: 20%;" onclick="send()">Gửi</button>
+        </div>
+    </div>
+
+    <script>
+        var key = "favorite";
+
+        function send() {
+            var url = document.getElementById("link").value;
+            console.log(url);
+            setCookie(key, url, 1);
+            setFavorite();
+        }
+
+        function setFavorite() {
+            var favorite = getCookie(key);
+            document.getElementById("favorite").value = favorite;
+        }
+
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + "; " + expires;
+            console.log(cname + "=" + cvalue + "; " + expires);
+            console.log(document.cookie);
+        }
+
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        setFavorite();
+    </script>
+</body>
+
+</html>

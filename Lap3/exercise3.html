@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3</title>
+    <script type="text/javascript">
+
+        function validateUsername() {
+            var UsernameCheck = new RegExp(/^[a-zA-Z0-9]+$/);
+            if (UsernameCheck.test(document.myForm.UsernameField.value)) {
+                alert("Valid Username");
+                return true;
+            } else {
+                alert("Invalid Username: " + document.myForm.UsernameField.value);
+                return false;
+            }
+        }
+
+        function validateEmail() {
+            const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+            var mailCheck = new RegExp(re);
+            if (mailCheck.test(document.myForm.MailField.value)) {
+                alert("Valid Email");
+                return true;
+            } else {
+                alert("Invalid Email: " + document.myForm.MailField.value);
+                return false;
+            }
+        }
+
+        function validateTelephone() {
+            var telephoneCheck = new RegExp(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/);
+            if (telephoneCheck.test(document.myForm.TelephoneField.value)) {
+                alert("Valid Telephone");
+                return true;
+            } else {
+                alert("Invalid Telephone : " + document.myForm.TelephoneField.value);
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form name="myForm">
+        Username : <input type="text" name="UsernameField"><input type="button" value="Check Username"
+            onclick="validateUsername()">
+        <br>
+        Email : <input type="text" name="MailField"><input type="button" value="Check Email" onclick="validateEmail()">
+        <br>
+        Telephone : <input type="text" name="TelephoneField"><input type="button" value="Telephone Money"
+            onclick="validateTelephone()">
+
+    </form>
+</body>
+
+</html>
