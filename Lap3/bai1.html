@@ -1,0 +1,40 @@
+<!DOCTYPE html public "-//W3C/DTD HTML 4.0 Transactional//EN">
+<html>
+
+<body>
+    <script type="text/javascript">
+        var myArray = new Array();
+        myArray.push("Tix");
+        myArray.push("Janice");
+        myArray.push("Joe");
+
+        document.write(myArray.toString());
+        document.write("<BR>");
+
+        document.write(myArray[1]);
+        document.write("<BR>");
+
+        document.write("Array Size : " + myArray.length);
+        document.write("<BR>");
+
+        var who = myArray.pop();
+        document.write("Popped Element : " + who);
+        document.write("<BR>");
+
+        document.write("Array size: " + myArray.length);
+        document.write("<BR>");
+        document.write("<BR>");
+
+        var otherArray = new Array("dog", 3, 8.4);
+
+        document.write(otherArray.toString());
+        document.write("<BR>");
+        document.write("<BR>");
+
+        otherArray["key"] = "value";
+        document.write(otherArray["key"]);
+        document.write("<BR>");
+    </script>
+</body>
+
+</html>
