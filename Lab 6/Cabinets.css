@@ -1,0 +1,17 @@
+h1 {
+    text-align: center;
+}
+p {
+    margin: 0.25in;
+    border: 0.25in solid black;
+    padding: 0.25in;
+    background: url(https://img.freepik.com/free-photo/old-gray-cement-wall-background_34552-324.jpg?size=626&ext=jpg);
+}
+body {
+    background: url(https://image.freepik.com/free-vector/white-brick-wall-texture-background-wallpaper-graphic-web-game-realistic-seamless-pattern_278395-88.jpg);
+}
+.banner {
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMgFz5ssB3sRt6NZ6h_tfc6E3xgwUE5uFmbA&usqp=CAU);
+    font-size: 50pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
