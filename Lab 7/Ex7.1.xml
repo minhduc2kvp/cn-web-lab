@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<student>
+	<firstname>Laura</firstname>
+	<lastname>Hunter</lastname>
+	<id>201812134</id>
+	<sex>male</sex>
+	<address>UK</address>
+	<dateofbirth>01/01/2000</dateofbirth>
+	<age>22</age>
+	<email>laurahunter11@gmail.com</email>
+</student>
